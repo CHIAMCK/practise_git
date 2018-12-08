@@ -58,10 +58,6 @@ module.exports = function(app) {
         .get(apiAuth, users.list)
         .post(apiAuth, users.requiresLogin, users.create);
 
-    app.route('/users2')
-        .get(apiAuth, users.list2)
-        .post(apiAuth, users.requiresLogin, users.create2);
-
     app.route('/users/export')
         .get(apiAuth, users.requiresLogin, users.export);
 
